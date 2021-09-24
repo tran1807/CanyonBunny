@@ -19,11 +19,13 @@ public class WorldController extends InputAdapter{
     public WorldController() {
     	init();
     }
+    
     private void init() {
 		initTestObjects();
 		initAnimals();
 		Gdx.input.setInputProcessor(this);
 	}
+    
     private void initAnimals() {
     	Texture ballTexture = new Texture("balll.jpg");
     	ball = new Sprite (ballTexture);
@@ -80,6 +82,7 @@ public class WorldController extends InputAdapter{
 		rotation %= 360;
 		testSprites[selectedSprite].setRotation(rotation);
 	}
+	
 	@Override
 	public boolean keyUp(int keycode) {
 		// TODO Auto-generated method stub
@@ -88,7 +91,7 @@ public class WorldController extends InputAdapter{
 				Gdx.app.log("Key Press", "Phim Space");
 				selectedSprite += 1;
 				if(selectedSprite > 4 ) selectedSprite = 0;
-				
+				ball.setPosition(ball.getX() + 1, ball.getY());
 				break;
 			default:
 				break;

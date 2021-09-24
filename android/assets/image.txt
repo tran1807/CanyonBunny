@@ -1,0 +1,33 @@
+images.png
+size: 640, 635
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+balll
+  rotate: false
+  xy: 0, 0
+  size: 300, 300
+  orig: 300, 300
+  offset: 0, 0
+  index: -1
+img1
+  rotate: false
+  xy: 300, 0
+  size: 150, 150
+  orig: 150, 150
+  offset: 0, 0
+  index: -1
+img2
+  rotate: false
+  xy: 450, 0
+  size: 180, 264
+  orig: 180, 264
+  offset: 0, 0
+  index: -1
+img3
+  rotate: false
+  xy: 0, 300
+  size: 640, 335
+  orig: 640, 335
+  offset: 0, 0
+  index: -1

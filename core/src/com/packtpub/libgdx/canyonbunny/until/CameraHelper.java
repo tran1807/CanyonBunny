@@ -1,4 +1,4 @@
-package com.packtpub.libgdx.canyonbunny;
+package com.packtpub.libgdx.canyonbunny.until;
 
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.Sprite;
@@ -30,27 +30,35 @@ public class CameraHelper {
     public Vector2 getPosition() {
         return position;
     }
+    
     public void addZoom(float amount) {
         setZoom(zoom + amount);
     }
+    
     public void setZoom(float zoom) {
         this.zoom = MathUtils.clamp(zoom, MAX_ZOOM_IN, MAX_ZOOM_OUT);
     }
+    
     public float getZoom() {
         return zoom;
     }
+    
     public void setTarget(Sprite target) {
         this.target = target;
     }
+    
     public Sprite getTarget() {
         return target;
     }
+    
     public boolean hasTarget() {
         return target != null;
     }
+    
     public boolean hasTarget(Sprite target) {
         return hasTarget() && this.target.equals(target);
     }
+    
     public void applyTo(OrthographicCamera camera) {
         camera.position.x = position.x;
         camera.position.y = position.y;
