@@ -1,4 +1,4 @@
-package com.packtpub.libgdx.canyonbunny;
+package com.packtpub.libgdx.canyonbunny.game;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
@@ -7,6 +7,7 @@ import com.badlogic.gdx.graphics.g2d.Sprite;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.utils.Array;
+import com.packtpub.libgdx.canyonbunny.Assets;
 import com.packtpub.libgdx.canyonbunny.until.CameraHelper;
 
 public class WorldController extends InputAdapter {
