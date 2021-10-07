@@ -1,4 +1,4 @@
-package com.packtpub.libgdx.canyonbunny;
+package com.packtpub.libgdx.canyonbunny.game;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetDescriptor;
@@ -88,4 +88,33 @@ public class Assets implements Disposable, AssetErrorListener {
           waterOverlay = atlas.findRegion("water_overlay");
       } 
   }
+  
+  public class AssetBunny {
+		public final AtlasRegion head;
+	    public AssetBunny (TextureAtlas atlas) {
+        head = atlas.findRegion("bunny_head");	    }
+  }
+  
+  public class AssetFeather {
+		public final AtlasRegion feather;
+	    public AssetFeather (TextureAtlas atlas) {
+	        feather = atlas.findRegion("item_feather");
+	    }
+	}
+  
+  public class AssetGoldCoin {
+		public final AtlasRegion goldCoin;
+	    public AssetGoldCoin (TextureAtlas atlas) {
+	        goldCoin = atlas.findRegion("item_gold_coin");
+	}
+	}
+  
+  public class AssetRock {
+		public final AtlasRegion edge;
+	    public final AtlasRegion middle;
+	    public AssetRock(TextureAtlas atlas) {
+	    	edge = atlas.findRegion("rock_edge");
+	        middle = atlas.findRegion("rock_middle");
+	    }
+	}
 }
