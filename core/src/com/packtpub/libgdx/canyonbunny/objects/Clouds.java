@@ -7,9 +7,11 @@ import com.badlogic.gdx.utils.Array;
 import com.packtpub.libgdx.canyonbunny.game.Assets;
 
 public class Clouds extends AbstractGameObject {
+	
     private float length;
     private Array < TextureRegion > regClouds;
     private Array < Cloud > clouds;
+    
     private class Cloud extends AbstractGameObject {
         private TextureRegion regCloud;
         public Cloud() {}
@@ -18,7 +20,7 @@ public class Clouds extends AbstractGameObject {
         }
         @Override
         public void render(SpriteBatch batch) {
-            TextureRegion reg = regCloud;
+            TextureRegion reg = regCloud;//Bức hình
             batch.draw(reg.getTexture(), position.x + origin.x,
                 position.y + origin.y, origin.x, origin.y, dimension.x,
                 dimension.y, scale.x, scale.y, rotation, reg.getRegionX(),
