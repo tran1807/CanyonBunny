@@ -2,6 +2,7 @@ package com.packtpub.libgdx.canyonbunny.game;
 
 import com.badlogic.gdx.InputAdapter;
 import com.badlogic.gdx.Application.ApplicationType;
+import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
 import com.badlogic.gdx.graphics.g2d.Sprite;
@@ -14,6 +15,7 @@ import com.packtpub.libgdx.canyonbunny.objects.BunnyHead.JUMP_STATE;
 import com.packtpub.libgdx.canyonbunny.objects.Feather;
 import com.packtpub.libgdx.canyonbunny.objects.GoldCoin;
 import com.packtpub.libgdx.canyonbunny.objects.Rock;
+import com.packtpub.libgdx.canyonbunny.screens.MenuScreen;
 import com.packtpub.libgdx.canyonbunny.until.CameraHelper;
 import com.packtpub.libgdx.canyonbunny.until.Constants;
 
@@ -28,12 +30,18 @@ public class WorldController extends InputAdapter {
   private static final String TAG = WorldController.class.getName();
   private Rectangle r1 = new Rectangle();
   private Rectangle r2 = new Rectangle();
-
-  public WorldController() {
+  private Game game;
+  private void backToMenu () {
+  // switch to menu screen
+  game.setScreen(new MenuScreen(game));
+  }
+  
+  public WorldController(Game game) {
     // TODO Auto-generated constructor stub
+	  this.game = game;
     init();
   }
-
+  
   private void init() {
     Gdx.input.setInputProcessor(this);
     cameraHelper = new CameraHelper();
