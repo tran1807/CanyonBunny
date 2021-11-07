@@ -18,6 +18,7 @@ import com.badlogic.gdx.scenes.scene2d.utils.ChangeListener;
 import com.badlogic.gdx.utils.viewport.FillViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.packtpub.libgdx.canyonbunny.game.Assets;
+import com.packtpub.libgdx.canyonbunny.until.AudioManager;
 import com.packtpub.libgdx.canyonbunny.until.CharacterSkin;
 import com.packtpub.libgdx.canyonbunny.until.Constants;
 import com.packtpub.libgdx.canyonbunny.until.GamePreferences;
@@ -248,11 +249,13 @@ public class MenuScreen extends AbstractGameScreen {
 	private void onSaveClicked() {
 		saveSettings();
 		onCancelClicked();
+		AudioManager.instance.onSettingsUpdated();
 	}
 
 	private void onCancelClicked() {
 		showMenuButtons(true);
 		showOptionsWindow(false, true);
+		AudioManager.instance.onSettingsUpdated();
 	}
 
 	private Table buildOptWinAudioSettings() {
